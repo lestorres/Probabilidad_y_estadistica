@@ -12,7 +12,7 @@ Rango intercuartílico
 coeficiente de variación
 
 
-Promedio, Varianza, Desviación estándar 		"Jose"
+Promedio, Varianza, Desviación estándar 	"Jose"
 Mediana, Cuartiles, Rango intercuartílico 	"Xavier"
 Moda, Rango muestral, coeficiente de variación 	"Lesmes"
 
