@@ -21,41 +21,28 @@ Template con lectura de datos en archivo csv
 
 # Su código va aquí...
 
-"""import pandas as pd
-df = pd.read_csv('C:/Users/PATH/')
-print(df.head(3))"""
-
-
+#import numpy
 import csv
-"""
-    https://parzibyte.me/blog
-"""
 
-nombre_archivo = "Datos.csv"
-with open(nombre_archivo, "r") as archivo:
-    lector = csv.reader(archivo, delimiter=";")
+nombre_archivo = "Datos.csv" # definis el csv
+with open(nombre_archivo, "r") as archivo:  # se define define para abrir
+    lector = csv.reader(archivo, delimiter=";") # Se separa cada elemento con ;
     # Omitir el encabezado
-    next(lector, None)
-    for fila in lector:
+    next(lector, None) 
+
+    for fila in lector: ## recorrido de 
         
         date = fila[0]
         Appliances = fila[1]
         lights = fila[2]
         T1 = fila[3]
         RH1 = fila[4]
-        T2 = (fila[5])
+        T2 = (fila[5]) ## La varible del equipo 
         RH2 = fila[6]
         #print(T2)
 
-def mean(T2):
-    return sum(T2) / len(T2)
+print(type(T2[15])) # sabemos que ha este punto es str
+A=float(T2[16])
 
-print(mean(T2))
-
-
-
-
-""" = fila[0]
-        calificacion = int(fila[1])
-        precio = float(fila[2])
-        print({nombre},{calificacion},{precio})"""
+print(A)
+print(A*2)
