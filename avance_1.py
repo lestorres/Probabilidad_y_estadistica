@@ -22,6 +22,7 @@ Template con lectura de datos en archivo csv
 # Su código va aquí...
 
 #import numpy
+import math
 import csv
 
 def creación_lista_datos_temp(): ##Funcion que crea la lista de los datos
@@ -108,6 +109,14 @@ def des (lecturas_sensores_temp_ordenada):
 print ("La desviacion estandar de la muestra es: ", des(lecturas_sensores_temp_ordenada))
 
 
-
+##___________________Cuartiles___________________
+def Cuartil (lecturas_sensores_temp_ordenada):
+    cuartiles=[]
+    cuartil1=lecturas_sensores_temp_ordenada [math.ceil(len(lecturas_sensores_temp_ordenada)/4)]
+    cuartiles.append(cuartil1)
+    cuartil3=lecturas_sensores_temp_ordenada [math.ceil(3*len(lecturas_sensores_temp_ordenada)/4)]
+    cuartiles.append(cuartil3)
+    return (cuartiles)
+print("los cuartiles 1 y 3 son: ",Cuartil(lecturas_sensores_temp_ordenada))
 
 
