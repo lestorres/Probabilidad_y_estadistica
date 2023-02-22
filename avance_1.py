@@ -24,6 +24,7 @@ Template con lectura de datos en archivo csv
 #import numpy
 import math
 import csv
+from statistics import mode
 
 def creación_lista_datos_temp(): ##Funcion que crea la lista de los datos
     lecturas_sensores_temp= []
@@ -39,23 +40,21 @@ def creación_lista_datos_temp(): ##Funcion que crea la lista de los datos
 
 ##___________________LA LISTA (sin ordenar) __________________________________
 lecturas_sensores_temp_lista= creación_lista_datos_temp ()
-print("primero: ", lecturas_sensores_temp_lista[0])
-print("ultimo: ", lecturas_sensores_temp_lista[-1])
+#print("primero: ", lecturas_sensores_temp_lista[0])
+#print("ultimo: ", lecturas_sensores_temp_lista[-1])
 
     
 ##___________________ORDENAR LA LISTA ______________________________________
 lecturas_sensores_temp_ordenada = sorted(lecturas_sensores_temp_lista) ## La lista que contiene todos los elementos ordenada
-print("primero: ", lecturas_sensores_temp_ordenada[0])
-print("ultimo: ", lecturas_sensores_temp_ordenada[-1])
+#print("primero: ", lecturas_sensores_temp_ordenada[0])
+#print("ultimo: ", lecturas_sensores_temp_ordenada[-1])
 
 
 
 
-## Resultados 
-print("La cantidad de elementos en la muestra: ", len(lecturas_sensores_temp_lista))## Aprox 19735 mediciones
-print(lecturas_sensores_temp_ordenada[:10]) ##primeros 10 elementos de la lista ordenada
+
      
-#print(type(T2[15])) # sabemos que ha este punto es str
+
 
 
 ##_________________Promedio_______________________________________________________
@@ -64,7 +63,7 @@ def promedio(lecturas_sensores_temp_ordenada): # se crea una funcion para determ
     return sum(lecturas_sensores_temp_ordenada) / len(lecturas_sensores_temp_ordenada) # se utiliza la funcion sum para sumar cada valor en la lista
 
     
-print("El promedio de la muestra es: ", (promedio(lecturas_sensores_temp_ordenada)))
+
 
 
 ##____________Mediana___________________________________________________________________
@@ -74,7 +73,7 @@ def mediana(lecturas_sensores_temp_ordenada): # funcion para determinar la media
     return (median(lecturas_sensores_temp_ordenada))
     
 
-print("La mediana de la muestra es: ",(mediana(lecturas_sensores_temp_ordenada)))
+
 
 
 ##_____________Varianza__________________________________________________________________
@@ -88,9 +87,9 @@ def varianza(lecturas_sensores_temp_ordenada): # funcion para calcular la varian
     return varianza
 
 
-print ("La varianza de la muestra es: ",varianza(lecturas_sensores_temp_ordenada))
 
 
+'''
 
 """Ejemplo"""
 edades = [5,6,6,7,8]
@@ -98,7 +97,7 @@ promedio(edades)
 print ("Ejemplo Promedio de edades:", promedio(edades))
 varianza(edades)
 print ("Ejemplo Varianza de edades: ", varianza(edades))
-
+'''
 
 ##___________Desviacion Estandar_________________
 
@@ -106,7 +105,7 @@ def des (lecturas_sensores_temp_ordenada):
     desviacion = varianza(lecturas_sensores_temp_ordenada)**(1/2)
     return desviacion
 
-print ("La desviacion estandar de la muestra es: ", des(lecturas_sensores_temp_ordenada))
+
 
 
 ##___________________Cuartiles___________________
@@ -114,9 +113,44 @@ def Cuartil (lecturas_sensores_temp_ordenada):
     cuartiles=[]
     cuartil1=lecturas_sensores_temp_ordenada [math.ceil(len(lecturas_sensores_temp_ordenada)/4)]
     cuartiles.append(cuartil1)
+    cuartiles.append(mediana(lecturas_sensores_temp_ordenada)) # mediana
     cuartil3=lecturas_sensores_temp_ordenada [math.ceil(3*len(lecturas_sensores_temp_ordenada)/4)]
     cuartiles.append(cuartil3)
     return (cuartiles)
-print("los cuartiles 1 y 3 son: ",Cuartil(lecturas_sensores_temp_ordenada))
+
+## _______________ coeficiente de variación_________________
+def coeficiente_de_variacion():
+    c_v=  des (lecturas_sensores_temp_ordenada) / promedio(lecturas_sensores_temp_ordenada)
+    c_v_cien= c_v * 100
+    return(c_v_cien)
+
+##_________________Rango Muestral_________
+def rango_muestral():
+    r= lecturas_sensores_temp_ordenada[-1]-lecturas_sensores_temp_ordenada[0]
+    return(r)
+
+def rango_intercuartilico():
+    r=Cuartil(lecturas_sensores_temp_ordenada)
+
+    a=r[-1]-r[0]
+
+    return(a)
+
+    
 
 
+## Resultados 
+
+print("\nMedidas de tendencia central: \n")
+print("La cantidad de elementos en la muestra: ", len(lecturas_sensores_temp_lista))## Aprox 19735 mediciones
+print("El promedio de la muestra es: ", (promedio(lecturas_sensores_temp_ordenada)))
+print("La moda de la muestra: ", mode(lecturas_sensores_temp_ordenada))
+print("La mediana de la muestra es: ",(mediana(lecturas_sensores_temp_ordenada)))
+print("Los cuartiles 1, 2 y 3 son: ",Cuartil(lecturas_sensores_temp_ordenada))
+
+print("\nMedidas de dispersión o variabilidad: \n")
+print ("La varianza de la muestra es: ", varianza(lecturas_sensores_temp_ordenada))
+print ("La desviacion estandar de la muestra es: ", des(lecturas_sensores_temp_ordenada))
+print("El coeficiente de variación de la muestra es: ", coeficiente_de_variacion(), "%" )
+print("El rango muestral es: ", rango_muestral())
+print("El rango intercuatílico de la muestra es: ", rango_intercuartilico())

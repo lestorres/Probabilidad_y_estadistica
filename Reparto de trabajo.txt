@@ -1,4 +1,5 @@
 Medidas de tendencia central
+muestra
 Promedio
 Moda
 Mediana
