@@ -28,6 +28,10 @@ def creación_lista_datos_temp(): ##Funcion que crea la lista de los datos
     return (lecturas_sensores_temp)    
 lecturas_sensores_temp_lista= creación_lista_datos_temp ()
 data=pd.Series(lecturas_sensores_temp_lista)
+#__________________histograma______________________
+plt.title("Resultados de monitoreo de la temperatura en la sala")
+plt.xlabel("Temperatura grados Celsius")
+plt.ylabel("Frecuencia escala logarítmica")
 bins=range(16,30) #limites del histograma
 plt.hist(data, bins=bins, edgecolor='black', log=True)
 plt.savefig('histograma',dpi=800)
@@ -35,7 +39,7 @@ plt.savefig('histograma',dpi=800)
 #codigo tiene que calcular: promedio, mediana, varianza, desviacion estandar, cuartiles, coeficiente de variación, rango muestral e intercuartilico
 mean=round(data.mean(),2)
 size=data.size
-mode=round(data.mode(),2)
+mode=round(data.mode(),2).values[0]
 var=round(data.var(),2)
 std=round(data.std(),2)
 cov=round((std/mean)*100,2)
@@ -47,7 +51,6 @@ q3=data.quantile(q=.75,interpolation= "higher")
 
 rangeq=q3-q1 #rango intercuartílico
 rango=maximo-minimo
-print("Resumen de las medidas de tendencia central y dispersión", "\nMínimo = " ,
-      minimo,"\nMáximo = ", maximo,
+print("Resumen de las medidas de tendencia central y dispersión", "\nMínimo = " , minimo,"\nMáximo = ", maximo,"\nModa = ", mode,
       "\nPromedio = ", mean, "\nCuartil 1 = ", q1, "\nMediana = ", mediana, "\nCuartil 3 = ", q3, "\nVarianza = ",
       var, "\nDesviación estandar = ", std, "\nCoeficiente de variación = ", cov, "\nCantidad de datos = ", size)
