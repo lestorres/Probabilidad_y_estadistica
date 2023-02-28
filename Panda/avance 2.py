@@ -37,20 +37,20 @@ plt.hist(data, bins=bins, edgecolor='black', log=True)
 plt.savefig('histograma',dpi=800)
 
 #codigo tiene que calcular: promedio, mediana, varianza, desviacion estandar, cuartiles, coeficiente de variación, rango muestral e intercuartilico
-mean=round(data.mean(),2)
+mean=round(data.mean(),4)
 size=data.size
-mode=round(data.mode(),2).values[0]
-var=round(data.var(),2)
-std=round(data.std(),2)
-cov=round((std/mean)*100,2)
-minimo=round(data.min(),2)
-maximo=round(data.max(),2)
+mode=round(data.mode(),4).values[0]
+var=round(data.var(),4)
+std=round(data.std(),4)
+cov=round((std/mean)*100,4)
+minimo=round(data.min(),4)
+maximo=round(data.max(),4)
 q1=data.quantile(q=.25, interpolation="higher")
 mediana=data.quantile(q=.5, interpolation="midpoint")
 q3=data.quantile(q=.75,interpolation= "higher")
 
-rangeq=q3-q1 #rango intercuartílico
-rango=maximo-minimo
+rangeq=round(q3-q1,3) #rango intercuartílico
+rango=round(maximo-minimo,3)
 print("Resumen de las medidas de tendencia central y dispersión", "\nMínimo = " , minimo,"\nMáximo = ", maximo,"\nModa = ", mode,
       "\nPromedio = ", mean, "\nCuartil 1 = ", q1, "\nMediana = ", mediana, "\nCuartil 3 = ", q3, "\nVarianza = ",
-      var, "\nDesviación estandar = ", std, "\nCoeficiente de variación = ", cov, "\nCantidad de datos = ", size)
+      var, "\nDesviación estandar = ", std, "\nCoeficiente de variación = ", cov, "\nCantidad de datos = ", size, "\nRango muestral = ", rango, "\nRango intercuartilico = ", rangeq)
