@@ -29,7 +29,7 @@ def creación_lista_datos_temp(): ##Funcion que crea la lista de los datos
 lecturas_sensores_temp_lista= creación_lista_datos_temp ()
 data=pd.Series(lecturas_sensores_temp_lista)
 #__________________histograma______________________
-plt.title("Resultados de monitoreo de la temperatura en la sala")
+plt.title("")
 plt.xlabel("Temperatura grados Celsius")
 plt.ylabel("Frecuencia escala logarítmica")
 bins=range(16,30) #limites del histograma
