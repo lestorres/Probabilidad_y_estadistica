@@ -31,9 +31,9 @@ data=pd.Series(lecturas_sensores_temp_lista)
 #__________________histograma______________________
 plt.title("")
 plt.xlabel("Temperatura grados Celsius")
-plt.ylabel("Frecuencia escala logarítmica")
+plt.ylabel("Frecuencia absoluta (número de ocurrencias)")
 bins=range(16,30) #limites del histograma
-plt.hist(data, bins=bins, edgecolor='black', log=True)
+plt.hist(data, bins=bins, edgecolor='black', log=False)
 plt.savefig('histograma',dpi=800)
 
 #codigo tiene que calcular: promedio, mediana, varianza, desviacion estandar, cuartiles, coeficiente de variación, rango muestral e intercuartilico
