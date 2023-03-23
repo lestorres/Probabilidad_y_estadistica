@@ -1,0 +1,73 @@
+-------De la parte 1
+
+1. Definir la distribución y justificala.
+
+2. Sacar la funcion de masa de probabilidad,
+rango y longitud de secuencia.
+
+3. No usar caja negra
+
+4. Graficarla
+
+(1 con moneda ideal y otro con moneda trucada)
+
+------De la parte 2
+
+1. Definir la distribución y justificala.
+
+2.Sacar la funcion de masa de probabilidad,
+rango y longitud de secuencia.
+
+
+3. No usar caja negra
+
+4. Graficarla
+
+(1 con moneda ideal y otro con moneda trucada)
+
+----------Son 4 graficas.
+
+
+---------Parte 3 ANALISIS
+
+Extra) Intentar usar Coeficiente de variación
+ para analisis
+
+1. Comparar graficas para ambos experimentos
+2. CONSULTA
+3. Comparar la probabilidad de una moneda trucada
+o no para al nivel de confianza.
+
+
+REPORTE IEEE para analisis 
+
+
+Fecha de entrega: 12 abril 12 medio dia
+
+
+
+Estudiar y sacar las distribuciones
+	Sábado 25 en la noche
+Progras 
+	Lo vemos el sábado o Domingo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
