@@ -1,0 +1,4 @@
+https://relopezbriega.github.io/blog/2016/06/29/distribuciones-de-probabilidad-con-python
+
+
+https://www.lawebdelprogramador.com/foros/Python/1763534-Crear-la-funcion-factorial-y-utilicela-para-crear-la-funcion-combinatoria.html
