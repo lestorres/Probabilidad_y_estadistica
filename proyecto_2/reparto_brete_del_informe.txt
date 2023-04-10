@@ -1,0 +1,13 @@
+Introducción
+	Justificación de las distribuciones 
+	usadas
+
+
+Marco teorico  (Xavier)
+	Conceptos de VAD usados en la progra
+
+	
+Resultados ( Gráficas )
+
+Analisis de resultados
+	Los puntos requeridos	
