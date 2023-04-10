@@ -1,4 +1,4 @@
-Introducción
+Introducción (Lesmes)
 	Justificación de las distribuciones 
 	usadas
 
@@ -7,7 +7,10 @@ Marco teorico  (Xavier)
 	Conceptos de VAD usados en la progra
 
 	
-Resultados ( Gráficas )
+Resultados ( Gráficas ) 
 
-Analisis de resultados
-	Los puntos requeridos	
+Analisis de resultados (TODOS)
+	Los puntos requeridos	(analisis) (Jose)
+
+Conclusiones (Todos)
+

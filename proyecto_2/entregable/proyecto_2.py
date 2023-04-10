@@ -32,11 +32,11 @@ def graficar_geometrica_sintruco():                                # graficar la
 
     k_g, fmp_geo = fmp_geometrica(N, p_1)
 
-    plt.stem(k_g, fmp_geo)                                                               # Dibuja los bastones verticales en cada valor de k con una altura igual a la probabilidad (p)
-    #plt.title('Distribución Geométrica sin truco')                                      # Agrega título al gráfico (NO ES NECESARIA EN INFORME)
-    plt.xlabel('Número de lanzamientos de moneda para que salga corona (Lanzamientos)')  # Agrega etiqueta al eje x
-    plt.ylabel('Probabilidad')                                                           # Agrega etiqueta al eje y
-    plt.show()                                                                           # Mostrar el gráfico
+    plt.stem(k_g, fmp_geo)                                         # Dibuja los bastones verticales en cada valor de k con una altura igual a la probabilidad (p)
+    #plt.title('Distribución Geométrica sin truco')                # Agrega título al gráfico (NO ES NECESARIA EN INFORME)
+    plt.xlabel('Número de lanzamientos de moneda (Lanzamientos)')  # Agrega etiqueta al eje x
+    plt.ylabel('Probabilidad')                                     # Agrega etiqueta al eje y
+    plt.show()                                                     # Mostrar el gráfico
 
 #_________________________________________________Graficando distribución Binomial________________________________
 
@@ -62,11 +62,11 @@ def graficar_binomial_sintruco():
 
     k_b, fmp_b = fmp_binomial(N, p_1)
 
-    plt.stem(k_b , fmp_b )                                                                        # Dibuja los bastones verticales en cada valor de k con una altura igual a la probabilidad (p)
-    #plt.title('Distribución Binomial sin truco')                                                 # Agrega título al gráfico (NO ES NECESARIA EN INFORME)
-    plt.xlabel('Número de salidas de corona de 10 lanzamientos de moneda (Salidas de corona)')    # Agrega etiqueta al eje x
-    plt.ylabel('Probabilidad')                                                                    # Agrega etiqueta al eje y
-    plt.show()                                                                                    # Mostrar el gráfico
+    plt.stem(k_b , fmp_b )                                           # Dibuja los bastones verticales en cada valor de k con una altura igual a la probabilidad (p)
+    #plt.title('Distribución Binomial sin truco')                    # Agrega título al gráfico (NO ES NECESARIA EN INFORME)
+    plt.xlabel('Número de lanzamientos de moneda (Lanzamientos)')    # Agrega etiqueta al eje x
+    plt.ylabel('Probabilidad')                                       # Agrega etiqueta al eje y
+    plt.show()                                                       # Mostrarel gráfico
 
 
 
@@ -84,11 +84,11 @@ def graficar_geometrica_truco():                                # graficar la di
 
     k_g, fmp_geo = fmp_geometrica(N, p_2)
 
-    plt.stem(k_g, fmp_geo)                                                               # Dibuja los bastones verticales en cada valor de k con una altura igual a la probabilidad (p)
-    #plt.title('Distribución Geométrica con truco')                                      # Agrega título al gráfico (NO ES NECESARIA EN INFORME)
-    plt.xlabel('Número de lanzamientos de moneda para que salga corona (Lanzamientos)')  # Agrega etiqueta al eje x
-    plt.ylabel('Probabilidad')                                                           # Agrega etiqueta al eje y
-    plt.show()                                                                           # Mostrar el gráfico
+    plt.stem(k_g, fmp_geo)                                         # Dibuja los bastones verticales en cada valor de k con una altura igual a la probabilidad (p)
+    #plt.title('Distribución Geométrica con truco')                # Agrega título al gráfico (NO ES NECESARIA EN INFORME)
+    plt.xlabel('Número de lanzamientos de moneda (Lanzamientos)')  # Agrega etiqueta al eje x
+    plt.ylabel('Probabilidad')                                     # Agrega etiqueta al eje y
+    plt.show()                                                     # Mostrar el gráfico
 
 #_________________________________________________________Binomial________________________________________________________________
 
@@ -96,10 +96,10 @@ def graficar_binomial_truco():
 
     k_b, fmp_b = fmp_binomial(N, p_2)
 
-    plt.stem(k_b , fmp_b )                                                                                # Dibuja los bastones verticales en cada valor de k con una altura igual a la probabilidad (p)
-    #plt.title('Distribución Binomial con truco')                                                         # Agrega título al gráfico (NO ES NECESARIA EN INFORME)
-    plt.xlabel('Número de salidas de corona de 10 lanzamientos de moneda (Salidas de corona)')            # Agrega etiqueta al eje x
-    plt.ylabel('Probabilidad')                                                                            # Agrega etiqueta al eje y
+    plt.stem(k_b , fmp_b )                                           # Dibuja los bastones verticales en cada valor de k con una altura igual a la probabilidad (p)
+    #plt.title('Distribución Binomial con truco')                    # Agrega título al gráfico (NO ES NECESARIA EN INFORME)
+    plt.xlabel('Número de lanzamientos de moneda (Lanzamientos)')    # Agrega etiqueta al eje x
+    plt.ylabel('Probabilidad')                                       # Agrega etiqueta al eje y
     plt.show() 
 
 graficar_geometrica_truco()
