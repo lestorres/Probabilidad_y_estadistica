@@ -1,0 +1,74 @@
+
+Tres meses de mediciones:
+
+	1. Mediciones de colega (Lesmes)
+	2. Mediciones propias (Jose)
+	3. Mediciones Iniciales (las de toda la vida) (Xavier)
+
+La maquina se considera aceptable cuando iguala o supera
+el 70% del rendimiento medio.
+
+Se mide y se promedia (a diario) y se promedia cada 3 meses 
+(promedio del promedio)
+
+Con mejora de la colega de "se pasó" 70% a 75% de rendimiento, 
+bajo una conclusión "que se debe revisar" ya que solo se tomó 
+en cuenta 1 semana. (ver Cuadro 1)
+
+Prueba y hipótesis 
+
+1. Comprobar que las configuraciones cumplen con 70% para que
+sean aceptables. 
+2. Se deben comparar las 3 configuraciones con 
+métodos estadísticos.
+
+
+Estimación de parametro de desviación estándar
+
+Usando el MLE buscar el valor de desviación y de una vez
+la varianza. 
+Al final se compara el método empírico con el analítico, 
+obteniendo el porcentaje de error.
+
+Inferencia estadística
+
+Una vez obtenido todos calculos anteriores de debe realizar
+la inferencia estadística 
+(usando: histogramas, cajas, tablas, etc.)
+
+Histrograma (moda, y valores promedios)
+
+Cajas (Desviación estándar y cuartiles)
+
+Tablas (representar datos)
+
+Con la inferencia estadística, responder a la preguntas
+
+
+Pasos del codigo
+
+1. Leer los datos del csv
+
+2. Averiguar rendimiento
+	sacar el promedio al promedio diario 
+
+3. Prueba e hipotesis (ver video)
+	Averiguar cada progra
+		Validar el 70% de aceptables 
+		(validar punto 2)
+		(se desconoce el algoritmo de validación)
+
+4. Programar el MLE (BIBLIOTECAS PROFE)
+	Para sacar Desviación y varianza
+	Porcentaje de error de valor analitico y empiritico
+
+5. Sacar estadística descriptiva
+	histograma
+	cajas
+
+
+
+
+
+
+
