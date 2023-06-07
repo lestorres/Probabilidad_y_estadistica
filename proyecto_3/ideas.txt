@@ -1,0 +1,5 @@
+tenemos: 
+media y desviacion estandar de las muestras.
+Prueba de hipotesis planteada
+tenemos los histogramas de las tres muestras
+valores criticos

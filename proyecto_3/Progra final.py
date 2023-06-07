@@ -20,33 +20,36 @@ mean1, std1 = stats.norm.fit(datos.iloc[0:89, 1], loc=meanl1) ##media y varianza
 
 stdr1  = datos.iloc[0:89,1].std()
 print("Inicial", )
-print("Real mean", meanl1) ##BIEN
+print("Real mean", meanl1) ##BIEN media muestral
 print("Real std", datos.iloc[0:89,1].std())
 #print("Estimated Mean MLE:", mean1)
 print("Estimated Standard Deviation MLE:", std1)
-print("porcentaje de error desviacion estandar:", ((stdr1-std1)/stdr1)*100)
+print("porcentaje de error varianza:", ((stdr1**2-std1**2)/stdr1**2)*100)
+print("porcentaje de error desviacion:", ((stdr1-std1)/stdr1)*100)
 
 meanl2 = datos.iloc[0:89, 2].mean() ##Valor real de media
 stdr2 = datos.iloc[0:89,2].std()
 mean2, std2 = stats.norm.fit(datos.iloc[0:89, 2], loc=meanl2)##media y varianza con MLE
 
 print("Primer cambio")
-print("Real mean", meanl2) ##BIEN
+print("Real mean", meanl2) ##BIEN media muestral
 print("Real std", stdr2 )
 #print("Estimated Mean MLE:", mean2)
 print("Estimated Standard Deviation MLE:", std2)
-print("porcentaje de error desviacion estandar:", ((stdr2-std2)/stdr2)*100)
+print("porcentaje de error varianza:", ((stdr2**2-std2**2)/stdr2**2)*100)
+print("porcentaje de error desviacion:", ((stdr2-std2)/stdr2)*100)
 
 meanl3 = datos.iloc[0:89, 3].mean() ##Valor real de media
 stdr3 = datos.iloc[0:89,3].std()
 mean, std3 = stats.norm.fit(datos.iloc[0:89, 3], loc=meanl3)##media y varianza con MLE
 
 print("Segundo cambio")
-print("Real mean", meanl3) ##BIEN
-print("Real std", stdr3)
+print("Real mean", meanl3) ##BIEN media muestral
+print("Real std", stdr3)## media aprox
 #print("Estimated Mean MLE:", mean)
 print("Estimated Standard Deviation MLE:", std3)
-print("porcentaje de error desviacion estandar:", ((stdr3-std3)/stdr3)*100)
+print("porcentaje de error varianza:", ((stdr3**2-std3**2)/stdr3**2)*100)
+print("porcentaje de error desviacion:", ((stdr3-std3)/stdr3)*100)
 
 #####################################################################################################################
 # Prueba de Hipótesis
@@ -83,13 +86,13 @@ print("Valor T = ", st3, "Valor p = ", pvalue3)
 
 print("\n\n Comparación de datos")
 
-stc1, pvaluec1 = stats.ttest_ind(datos.iloc[0:89,1], datos.iloc[0:89,2], equal_var = False, alternative = 'two-sided')
+stc1, pvaluec1 = stats.ttest_ind(datos.iloc[0:89,2], datos.iloc[0:89,1], equal_var = False, alternative = 'two-sided')
 print("Valor T = ", stc1, "Valor p = ", pvaluec1, "\n")
 
-stc2, pvaluec2 = stats.ttest_ind(datos.iloc[0:89,1], datos.iloc[0:89,3], equal_var = False, alternative = 'two-sided')
+stc2, pvaluec2 = stats.ttest_ind(datos.iloc[0:89,3], datos.iloc[0:89,1], equal_var = False, alternative = 'two-sided')
 print("Valor T = ", stc2, "Valor p = ", pvaluec2, "\n")
 
-stc3, pvaluec3 = stats.ttest_ind(datos.iloc[0:89,2], datos.iloc[0:89,3], equal_var = False, alternative = 'two-sided')
+stc3, pvaluec3 = stats.ttest_ind(datos.iloc[0:89,3], datos.iloc[0:89,2], equal_var = False, alternative = 'two-sided')
 print("Valor T = ", stc3, "Valor p = ", pvaluec3)
 
 
@@ -136,6 +139,6 @@ plt.legend()
 # Mostrar el gráfico
 plt.show()
 
-
-
-
+print("\n varianza muestra inicial:", std1**2)
+print("\n varianza muestra primer cambio:", std2**2)
+print("\n varianza muestra primer cambio:", std3**2)
